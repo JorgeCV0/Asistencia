@@ -1,48 +1,96 @@
-body{
+
+body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: antiquewhite;
+    background-color: white; 
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    text-align: center;
-    color: #333;
 
+header {
+    background-color: #06087e; 
+    color:  #06087e; 
 }
 
-table{
+header .navbar-brand {
+    color:  #06087e; 
+    
+}
+
+header .nav-link {
+    
+    color:  #06087e; 
+    margin-right: 20px;
+}
+
+header .nav-link:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+button.btn-primary {
+    background-color: #06087e; 
+    border: none;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+button.btn-warning {
+    background-color: #ffc107;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+form {
+    background-color: #f8f9fa; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
 }
 
-table, th, td{
-    border: 1px solid #333;
+thead {
+    background-color: #06087e; 
+    color: white;
 }
 
-th, td{
+th, td {
     padding: 10px;
     text-align: center;
+    border: 1px solid #ddd;
 }
 
-button{
-    padding: 5px 10px;
-    background-color: blueviolet;
-    color: white;
-    border: none;
-    cursor: pointer;
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-button:hover{
-    background-color: palevioletred;
-
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
 
-#stundentList{
-    margin-top: 20px;
-    display: none;
+
+#studentFormContainer, #studentListContainer {
+    margin-top: 40px;
 }
 
-ul li{
-   background-color: aliceblue;  
+h1, h2 {
+    color: #06087e; 
 }

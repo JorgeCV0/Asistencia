@@ -5,29 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistencias</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Grupos</h1>
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sistema de Asistencias</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Grupos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Alumnos</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-<table id="gruoupTable">
-    <thead>
-        <tr>
-            <th>Grupos</th>
-            <th>Accion</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>DSM65D</td>
-            <td><button>Ver alumnos</button></td>
-        </tr>
-    </tbody>
-</table>
-<div id="studentList">
-    <h2>Alumnos del grupo</h2>
-    <ul id="studentList"></ul>
-</div>
 
+    <div class="container mt-5">
+        <h1  style="color:  #06087e;">Grupos</h1>
+
+        <form id="groupForm" class="bg-light p-4 rounded shadow-sm">
+            <div class="mb-3">
+                <label for="groupName" class="form-label">Nombre del Grupo</label>
+                <input type="text" id="groupName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="studentCount" class="form-label">Cantidad de Alumnos</label>
+                <input type="number" id="studentCount" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar Grupo</button>
+        </form>
+
+        <!-- grupos -->
+        <table class="table mt-5" id="groupTable">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th>Grupos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <!-- Formulario alumnos -->
+        <div id="studentFormContainer" style="display: none;">
+            <h2>Agregar Alumnos al Grupo</h2>
+            <form id="studentForm" class="bg-light p-4 rounded shadow-sm">
+                <div id="studentFields">
+
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Alumnos</button>
+            </form>
+        </div>
+
+        <div id="studentListContainer" style="display: none;">
+            <h2>Alumnos del Grupo</h2>
+            <table class="table" id="studentTable">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>Nombre del Alumno</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
